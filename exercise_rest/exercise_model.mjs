@@ -62,7 +62,9 @@ const Exercise = mongoose.model("Exercise", exerciseSchema);
  */
  const updateExercises = async (filter, update) => {
     const result = await Exercise.updateOne(filter, update);
-    return result.modifiedCount;
+    // return result.modifiedCount;
+    return result;
+    // consider change to matchedCount
 }
 
 /**
